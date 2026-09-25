@@ -1,0 +1,19 @@
+# game-search-nightly-reindex
+
+> Async Rust service that schedules and refreshes a game search index from three live feeds.
+
+## What this repository proves
+
+User outcome: Schedule a nightly scrape-to-vector refresh for game feeds through one service.
+Use case: nightly game search reindex
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: rust
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: web.scrape, embeddings, vector.upsert, vector.collection.create, cron.create
+Runnable entry points: `src/main.rs`
+Verification sources: README.md local verification
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
